@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium Akanksha Beauty Parlour offering hair care, facials, waxing, threading, and makeup services. Book your appointment today!">
+    <title>Akanksha Beauty Parlour - Beauty & Care You Can Trust</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-spa"></i>
+                <span class="parlour-name">Akanksha Beauty Parlour</span>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Akanksha Beauty Parlour</h1>
+                <p class="hero-tagline">Beauty & Care You Can Trust</p>
+                <p class="hero-description">Your trusted destination for premium beauty services. Experience excellence in every visit.</p>
+                <div class="hero-buttons">
+                    <a href="#booking" class="btn btn-primary">
+                        <i class="fab fa-whatsapp"></i> Book Appointment
+                    </a>
+                    <a href="#location" class="btn btn-secondary">
+                        <i class="fas fa-map-marker-alt"></i> Get Directions
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">Choose a category — simple and easy to understand</p>
+
+            <div class="services-categories">
+                <!-- 1) Hair Care -->
+                <div class="services-category">
+                    <div class="category-header">
+                        <h3 class="category-title"><i class="fas fa-scissors"></i> Hair Care</h3>
+                        <p class="category-subtitle">Haircut, spa, straightening, smoothening & color</p>
+                    </div>
+
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <div class="service-image"><img src="image/hair.jpg" alt="Hair Cut"></div>
+                            <h4 class="service-name">Hair Cut</h4>
+                            <p>Trendy or classic cuts as per your face shape.</p>
+                            <button class="btn-service" onclick="bookService('Hair Cut')">Book Now</button>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-image"><img src="image/HAIRSPA.jpeg" alt="Hair Spa"></div>
+                            <h4 class="service-name">Hair Spa</h4>
+                            <p>Deep nourishment for soft, shiny, healthy hair.</p>
+                            <button class="btn-service" onclick="bookService('Hair Spa')">Book Now</button>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-image"><img src="image/STRAIGHTNING.jpeg" alt="Hair Straightening"></div>
+                            <h4 class="service-name">Hair Straightening</h4>
+                            <p>Sleek, straight look with long-lasting finish.</p>
+                            <button class="btn-service" onclick="bookService('Hair Straightening')">Book Now</button>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-image"><img src="image/smothing.jpeg" alt="Hair Smoothening"></div>
+                            <h4 class="service-name">Hair Smoothening</h4>
+                            <p>Frizz control and smooth hair for easy styling.</p>
+                            <button class="btn-service" onclick="bookService('Hair Smoothening')">Book Now</button>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-image"><img src="image/HAIRCOLOURING.jpeg" alt="Hair Coloring"></div>
+                            <h4 class="service-name">Hair Coloring</h4>
+                            <p>Global color, root touch-up, highlights & more.</p>
+                            <button class="btn-service" onclick="bookService('Hair Coloring')">Book Now</button>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-image"><img src="image/KERATIN.jpeg" alt="Hair Keratin"></div>
+                            <h4 class="service-name">Hair Keratin</h4>
+                            <p>Restore damaged hair with keratin treatment.</p>
+                            <button class="btn-service" onclick="bookService('Hair Keratin')">Book Now</button>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-image"><img src="image/REBOUNDING.jpeg" alt="Hair Rebonding"></div>
+                            <h4 class="service-name">Hair Rebonding</h4>
+                            <p>Restore straight hair with rebonding treatment.</p>
+                            <button class="btn-service" onclick="bookService('Hair Rebonding')">Book Now</button>
+                        </div>
+        
+                    </div>
+                </div>
+
+                <!-- 2) Skin Care -->
+                <div class="services-category">
+                    <div class="category-header">
+                        <h3 class="category-title"><i class="fas fa-leaf"></i> Skin Care</h3>
+                        <p class="category-subtitle">Facial, cleanup, bleach & detan</p>
+                    </div>
+
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <div class="service-image"><img src="image/facial.jpeg" alt="Facial"></div>
+                            <h4 class="service-name">Facial</h4>
+                            <p>Glow facial as per your skin type and need.</p>
+                            <button class="btn-service" onclick="bookService('Facial')">Book Now</button>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-image"><img src="image/cleanup.jpeg" alt="Cleanup"></div>
+                            <h4 class="service-name">Cleanup</h4>
+                            <p>Quick cleanse + scrub + polish for fresh skin.</p>
+                            <button class="btn-service" onclick="bookService('Cleanup')">Book Now</button>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-image"><img src="image/de tan.jpeg" alt="Detan"></div>
+                            <h4 class="service-name">Detan</h4>
+                            <p>Remove tan and bring back your natural glow.</p>
+                            <button class="btn-service" onclick="bookService('Detan')">Book Now</button>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-image"><img src="image/body polish.jpeg" alt="Body polish"></div>
+                            <h4 class="service-name">Body polish</h4>
+                            <p>Exfoliate and nourish your body for a smooth, radiant finish.</p>
+                            <button class="btn-service" onclick="bookService('Body polish')">Book Now</button>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-image"><img src="image/body massage.jpeg" alt="Body Massage"></div>
+                            <h4 class="service-name">Body Massage</h4>
+                            <p>Relaxing and therapeutic body massage for ultimate relaxation.</p>
+                            <button class="btn-service" onclick="bookService('Body Massage')">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3) Makeup -->
+                <div class="services-category">
+                    <div class="category-header">
+                        <h3 class="category-title"><i class="fas fa-face-kiss-wink-heart"></i> Makeup</h3>
+                        <p class="category-subtitle">Party, bridal & engagement makeup</p>
+                    </div>
+
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <div class="service-image"><img src="image/party makeup.jpeg" alt="Party Makeup"></div>
+                            <h4 class="service-name">Party Makeup</h4>
+                            <p>Simple to glam looks for any function.</p>
+                            <button class="btn-service" onclick="bookService('Party Makeup')">Book Now</button>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-image"><img src="image/bridal makeup.jpeg" alt="Bridal Makeup"></div>
+                            <h4 class="service-name">Bridal Makeup</h4>
+                            <p>Long-lasting bridal look with premium products.</p>
+                            <button class="btn-service" onclick="bookService('Bridal Makeup')">Book Now</button>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-image"><img src="image/natural.jpeg" alt="Natural Makeup"></div>
+                            <h4 class="service-name">Natural Makeup</h4>
+                            <p>Elegant, photo-ready makeup for your big day.</p>
+                            <button class="btn-service" onclick="bookService('Natural Makeup')">Book Now</button>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-image"><img src="image/hd makeup.jpeg" alt="HD Makeup"></div>
+                            <h4 class="service-name">HD Makeup</h4>
+                            <p>Elegant, photo-ready makeup for your big day.</p>
+                            <button class="btn-service" onclick="bookService('HD Makeup')">Book Now</button>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-image"><img src="image/glam.jpeg" alt="Glam Makeup"></div>
+                            <h4 class="service-name">Glam Makeup</h4>
+                            <p>Elegant, photo-ready makeup for your big day.</p>
+                            <button class="btn-service" onclick="bookService('Glam Makeup')">Book Now</button>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-image"><img src="image/dew makeup.jpeg" alt="Dewy Makeup"></div>
+                            <h4 class="service-name">Dewy Makeup</h4>
+                            <p>Elegant, photo-ready makeup for your big day.</p>
+                            <button class="btn-service" onclick="bookService('Dewy Makeup')">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4) Other Services -->
+                <div class="services-category">
+                    <div class="category-header">
+                        <h3 class="category-title"><i class="fas fa-hand-sparkles"></i> Other Services</h3>
+                        <p class="category-subtitle">Waxing, threading, manicure & pedicure</p>
+                    </div>
+
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <div class="service-image"><img src="image/wax.jpeg" alt="Waxing"></div>
+                            <h4 class="service-name">Waxing (Full / Half)</h4>
+                            <p>Smooth skin with full body / half body options.</p>
+                            <button class="btn-service" onclick="bookService('Waxing (Full / Half)')">Book Now</button>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-image"><img src="image/Threading.jpeg" alt="Threading"></div>
+                            <h4 class="service-name">Threading</h4>
+                            <p>Clean eyebrow shaping + upper-lip threading.</p>
+                            <button class="btn-service" onclick="bookService('Threading')">Book Now</button>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-image"><img src="image/MANICURE.jpeg" alt="Manicure"></div>
+                            <h4 class="service-name">Manicure</h4>
+                            <p>Clean, shape & shine for soft, beautiful hands.</p>
+                            <button class="btn-service" onclick="bookService('Manicure')">Book Now</button>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-image"><img src="image/PADI.jpeg" alt="Pedicure"></div>
+                            <h4 class="service-name">Pedicure</h4>
+                            <p>Relaxing foot care for softness and freshness.</p>
+                            <button class="btn-service" onclick="bookService('Pedicure')">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking">
+        <div class="container">
+            <h2 class="section-title">Book Your Appointment</h2>
+            <p class="section-subtitle">Fill in the details and we'll get back to you on WhatsApp</p>
+            <form id="bookingForm" class="booking-form">
+                <div class="form-group">
+                    <label for="name">
+                        <i class="fas fa-user"></i> Your Name
+                    </label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label for="phone">
+                        <i class="fas fa-phone"></i> Phone Number
+                    </label>
+                    <input type="tel" id="phone" name="phone" required placeholder="Enter your 10-digit mobile number">
+                </div>
+                <div class="form-group">
+                    <label for="service">
+                        <i class="fas fa-spa"></i> Select Service
+                    </label>
+                    <select id="service" name="service" required>
+                        <option value="">Choose a service</option>
+                        <optgroup label="Hair Care">
+                            <option value="Hair Cut">Hair Cut</option>
+                            <option value="Hair Spa">Hair Spa</option>
+                            <option value="Hair Straightening">Hair Straightening</option>
+                            <option value="Hair Smoothening">Hair Smoothening</option>
+                            <option value="Hair Coloring">Hair Coloring</option>
+                            <option value="Hair Keratin">Hair Keratin</option>
+                            <option value="Hair Rebonding">Hair Rebonding</option>
+                        </optgroup>
+                        <optgroup label="Skin Care">
+                            <option value="Facial">Facial</option>
+                            <option value="Cleanup">Cleanup</option>
+                            <option value="Detan">Detan</option>
+                            <option value="Body polish">Body polish</option>
+                            <option value="Body Massage">Body Massage</option>
+                        </optgroup>
+                        <optgroup label="Makeup">
+                            <option value="Party Makeup">Party Makeup</option>
+                            <option value="Bridal Makeup">Bridal Makeup</option>
+                            <option value="Natural Makeup">Natural Makeup</option>
+                            <option value="HD Makeup">HD Makeup</option>
+                            <option value="Glam Makeup">Glam Makeup</option>
+                            <option value="Dewy Makeup">Dewy Makeup</option>
+                        </optgroup>
+                        <optgroup label="Other Services">
+                            <option value="Waxing (Full / Half)">Waxing (Full / Half)</option>
+                            <option value="Threading">Threading</option>
+                            <option value="Manicure">Manicure</option>
+                            <option value="Pedicure">Pedicure</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="date">
+                        <i class="fas fa-calendar"></i> Preferred Date
+                    </label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">
+                    <i class="fab fa-whatsapp"></i> Send via WhatsApp
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Location & Directions Section -->
+    <section id="location" class="location">
+        <div class="container">
+            <h2 class="section-title">Find Us</h2>
+            <p class="section-subtitle">Visit us at our convenient location</p>
+            <div class="location-content">
+                <div class="location-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Address</h3>
+                            <p>Satam Park Colony Sec B Musakhedi Inodre </p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Working Hours</h3>
+                            <p>Monday - Saturday: 9:00 AM - 8:00 PM<br>Sunday: 10:00 AM - 6:00 PM</p>
+                        </div>
+                    </div>
+                    <a href="https://www.google.com/maps/place/Akanksha+bueaty+parlour/@22.6945087,75.902013,19.15z/data=!4m6!3m5!1s0x3962e3331e7da3dd:0x63792a18859aaf32!8m2!3d22.6938916!4d75.9014813!16s%2Fg%2F11h1m4z01k?hl=en&entry=ttu&g_ep=EgoyMDI2MDEyMS4wIKXMDSoKLDEwMDc5MjA2OUgBUAM%3D" target="_blank" class="btn btn-primary">
+                        <i class="fas fa-directions"></i> Click for Directions
+                    </a>
+                </div>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.1234567890123!2d72.12345678901234!3d19.123456789012345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDA3JzI0LjQiTiA3MsKwMDcnMjQuNCJF!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Our Gallery</h2>
+            <p class="section-subtitle">See our work and beautiful salon</p>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="image/hair.jpg" alt="Hair Transformation">
+                    <div class="gallery-overlay">
+                        <p>Hair Transformation</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="image/makeup.jpeg" alt="Before and After Transformation">
+                    <div class="gallery-overlay">
+                        <p>Makeup Look</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300/F5E6E8/8B6F7E?text=Salon+Interior+1" alt="Salon Interior">
+                    <div class="gallery-overlay">
+                        <p>Our Beautiful Salon</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300/F5E6E8/8B6F7E?text=Salon+Interior+2" alt="Salon Interior">
+                    <div class="gallery-overlay">
+                        <p>Comfortable Seating</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300/F5E6E8/8B6F7E?text=Before+After+3" alt="Before and After Transformation">
+                    <div class="gallery-overlay">
+                        <p>Hair Color Work</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300/F5E6E8/8B6F7E?text=Salon+Interior+3" alt="Salon Interior">
+                    <div class="gallery-overlay">
+                        <p>Modern Facilities</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Your Trusted Beauty Partner</h3>
+                    <p>Welcome to our Akanksha Beauty Parlour, where we've been serving our community with dedication and passion for years. We understand that beauty is personal, and every client deserves personalized attention and care.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <i class="fas fa-award"></i>
+                            <div>
+                                <h4>Years of Experience</h4>
+                                <p>Our skilled team brings years of expertise in beauty and wellness services.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <div>
+                                <h4>Hygiene First</h4>
+                                <p>We maintain the highest standards of cleanliness and hygiene in all our services.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-heart"></i>
+                            <div>
+                                <h4>Customer Satisfaction</h4>
+                                <p>Your happiness is our priority. We go the extra mile to ensure you leave with a smile.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://via.placeholder.com/500x600/F5E6E8/8B6F7E?text=About+Us" alt="About our parlour">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Feedback Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <p class="section-subtitle">Real feedback from our happy clients</p>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Best parlour in the area, very satisfied with their services. The staff is professional and friendly."</p>
+                    <div class="testimonial-author">
+                        <strong>Priya Sharma</strong>
+                        <span>Regular Customer</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Excellent hair spa treatment! My hair feels so smooth and healthy. Highly recommend this place."</p>
+                    <div class="testimonial-author">
+                        <strong>Anjali Patel</strong>
+                        <span>Happy Client</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Got my bridal makeup done here. Looked absolutely stunning on my wedding day! Thank you so much."</p>
+                    <div class="testimonial-author">
+                        <strong>Meera Desai</strong>
+                        <span>Bride</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Placeholder for Instagram reel embed -->
+            <div class="instagram-placeholder">
+                <p><i class="fab fa-instagram"></i> Follow us on Instagram for more transformations and updates!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">We'd love to hear from you</p>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Call Us</h3>
+                            <a href="tel:+919753304470">+919753304470</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <h3>WhatsApp</h3>
+                            <a href="https://wa.me/919753304470" target="_blank">Chat with us</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Visit Us</h3>
+                            <p>Satam Park Colony Sec B Musakhedi Inodre </p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Working Hours</h3>
+                            <p>Monday - Saturday: 9:00 AM - 8:00 PM<br>Sunday: 10:00 AM - 6:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>
+                        <i class="fas fa-spa"></i> Akanksha Beauty Parlour
+                    </h3>
+                    <p>Beauty & Care You Can Trust</p>
+                    <p>Your trusted destination for premium beauty services.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/yourparlour" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/919753304470" target="_blank" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Akanksha Beauty Parlour. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919753304470" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
