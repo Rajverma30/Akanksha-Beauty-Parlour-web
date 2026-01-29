@@ -269,48 +269,58 @@
                     <input type="tel" id="phone" name="phone" required placeholder="Enter your 10-digit mobile number">
                 </div>
                 <div class="form-group">
-                    <label for="service">
-                        <i class="fas fa-spa"></i> Select Service
+                    <label>
+                        <i class="fas fa-spa"></i> Select Service(s) <span class="label-hint">— multiple options allowed</span>
                     </label>
-                    <select id="service" name="service" required>
-                        <option value="">Choose a service</option>
-                        <optgroup label="Hair Care">
-                            <option value="Hair Cut">Hair Cut</option>
-                            <option value="Hair Spa">Hair Spa</option>
-                            <option value="Hair Straightening">Hair Straightening</option>
-                            <option value="Hair Smoothening">Hair Smoothening</option>
-                            <option value="Hair Coloring">Hair Coloring</option>
-                            <option value="Hair Keratin">Hair Keratin</option>
-                            <option value="Hair Rebonding">Hair Rebonding</option>
-                        </optgroup>
-                        <optgroup label="Skin Care">
-                            <option value="Facial">Facial</option>
-                            <option value="Cleanup">Cleanup</option>
-                            <option value="Detan">Detan</option>
-                            <option value="Body polish">Body polish</option>
-                            <option value="Body Massage">Body Massage</option>
-                        </optgroup>
-                        <optgroup label="Makeup">
-                            <option value="Party Makeup">Party Makeup</option>
-                            <option value="Bridal Makeup">Bridal Makeup</option>
-                            <option value="Natural Makeup">Natural Makeup</option>
-                            <option value="HD Makeup">HD Makeup</option>
-                            <option value="Glam Makeup">Glam Makeup</option>
-                            <option value="Dewy Makeup">Dewy Makeup</option>
-                        </optgroup>
-                        <optgroup label="Other Services">
-                            <option value="Waxing (Full / Half)">Waxing (Full / Half)</option>
-                            <option value="Threading">Threading</option>
-                            <option value="Manicure">Manicure</option>
-                            <option value="Pedicure">Pedicure</option>
-                        </optgroup>
-                    </select>
+                    <div class="services-checkbox-group" id="serviceCheckboxes">
+                        <div class="checkbox-optgroup">
+                            <span class="optgroup-label">Hair Care</span>
+                            <label class="checkbox-label"><input type="checkbox" name="service" value="Hair Cut"> Hair Cut</label>
+                            <label class="checkbox-label"><input type="checkbox" name="service" value="Hair Spa"> Hair Spa</label>
+                            <label class="checkbox-label"><input type="checkbox" name="service" value="Hair Straightening"> Hair Straightening</label>
+                            <label class="checkbox-label"><input type="checkbox" name="service" value="Hair Smoothening"> Hair Smoothening</label>
+                            <label class="checkbox-label"><input type="checkbox" name="service" value="Hair Coloring"> Hair Coloring</label>
+                            <label class="checkbox-label"><input type="checkbox" name="service" value="Hair Keratin"> Hair Keratin</label>
+                            <label class="checkbox-label"><input type="checkbox" name="service" value="Hair Rebonding"> Hair Rebonding</label>
+                        </div>
+                        <div class="checkbox-optgroup">
+                            <span class="optgroup-label">Skin Care</span>
+                            <label class="checkbox-label"><input type="checkbox" name="service" value="Facial"> Facial</label>
+                            <label class="checkbox-label"><input type="checkbox" name="service" value="Cleanup"> Cleanup</label>
+                            <label class="checkbox-label"><input type="checkbox" name="service" value="Detan"> Detan</label>
+                            <label class="checkbox-label"><input type="checkbox" name="service" value="Body polish"> Body polish</label>
+                            <label class="checkbox-label"><input type="checkbox" name="service" value="Body Massage"> Body Massage</label>
+                        </div>
+                        <div class="checkbox-optgroup">
+                            <span class="optgroup-label">Makeup</span>
+                            <label class="checkbox-label"><input type="checkbox" name="service" value="Party Makeup"> Party Makeup</label>
+                            <label class="checkbox-label"><input type="checkbox" name="service" value="Bridal Makeup"> Bridal Makeup</label>
+                            <label class="checkbox-label"><input type="checkbox" name="service" value="Natural Makeup"> Natural Makeup</label>
+                            <label class="checkbox-label"><input type="checkbox" name="service" value="HD Makeup"> HD Makeup</label>
+                            <label class="checkbox-label"><input type="checkbox" name="service" value="Glam Makeup"> Glam Makeup</label>
+                            <label class="checkbox-label"><input type="checkbox" name="service" value="Dewy Makeup"> Dewy Makeup</label>
+                        </div>
+                        <div class="checkbox-optgroup">
+                            <span class="optgroup-label">Other Services</span>
+                            <label class="checkbox-label"><input type="checkbox" name="service" value="Waxing (Full / Half)"> Waxing (Full / Half)</label>
+                            <label class="checkbox-label"><input type="checkbox" name="service" value="Threading"> Threading</label>
+                            <label class="checkbox-label"><input type="checkbox" name="service" value="Manicure"> Manicure</label>
+                            <label class="checkbox-label"><input type="checkbox" name="service" value="Pedicure"> Pedicure</label>
+                        </div>
+                    </div>
+                    <span class="form-error" id="serviceError" aria-live="polite"></span>
                 </div>
                 <div class="form-group">
                     <label for="date">
                         <i class="fas fa-calendar"></i> Preferred Date
                     </label>
                     <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">
+                        <i class="fas fa-clock"></i> Preferred Time
+                    </label>
+                    <input type="time" id="time" name="time" required>
                 </div>
                 <button type="submit" class="btn btn-primary btn-block">
                     <i class="fab fa-whatsapp"></i> Send via WhatsApp
@@ -340,20 +350,24 @@
                             <p>Monday - Saturday: 9:00 AM - 8:00 PM<br>Sunday: 10:00 AM - 6:00 PM</p>
                         </div>
                     </div>
-                    <a href="https://www.google.com/maps/place/Akanksha+bueaty+parlour/@22.6945087,75.902013,19.15z/data=!4m6!3m5!1s0x3962e3331e7da3dd:0x63792a18859aaf32!8m2!3d22.6938916!4d75.9014813!16s%2Fg%2F11h1m4z01k?hl=en&entry=ttu&g_ep=EgoyMDI2MDEyMS4wIKXMDSoKLDEwMDc5MjA2OUgBUAM%3D" target="_blank" class="btn btn-primary">
+                    <a href="https://maps.app.goo.gl/UC9F76kKc9xiVU4L9" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                         <i class="fas fa-directions"></i> Click for Directions
                     </a>
                 </div>
                 <div class="map-container">
                     <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.1234567890123!2d72.12345678901234!3d19.123456789012345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDA3JzI0LjQiTiA3MsKwMDcnMjQuNCJF!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.089234!2d75.9014813!3d22.6938916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962e3331e7da3dd%3A0x63792a18859aaf32!2sAkanksha%20Beauty%20Parlour!5e0!3m2!1sen!2sin!4v1738234567890!5m2!1sen!2sin"
                         width="100%" 
                         height="100%" 
                         style="border:0;" 
                         allowfullscreen="" 
                         loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Akanksha Beauty Parlour Location">
                     </iframe>
+                    <a href="https://maps.app.goo.gl/UC9F76kKc9xiVU4L9" target="_blank" rel="noopener noreferrer" class="map-link-overlay">
+                        <i class="fas fa-external-link-alt"></i> Open in Google Maps
+                    </a>
                 </div>
             </div>
         </div>

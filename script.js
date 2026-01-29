@@ -80,12 +80,38 @@ document.addEventListener('DOMContentLoaded', function() {
             // Get form values
             const name = document.getElementById('name').value.trim();
             const phone = document.getElementById('phone').value.trim();
-            const service = document.getElementById('service').value;
             const date = document.getElementById('date').value;
+            const timeInput = document.getElementById('time');
+            const time = timeInput ? timeInput.value : '';
+            
+            // Get selected services (multiple checkboxes)
+            const serviceCheckboxes = document.querySelectorAll('input[name="service"]:checked');
+            const selectedServices = Array.from(serviceCheckboxes).map(cb => cb.value);
+            const serviceError = document.getElementById('serviceError');
             
             // Validate form
-            if (!name || !phone || !service || !date) {
-                alert('Please fill in all fields');
+            if (!name || !phone) {
+                alert('Please enter your name and phone number');
+                return;
+            }
+            
+            if (selectedServices.length === 0) {
+                if (serviceError) {
+                    serviceError.textContent = 'Please select at least one service';
+                } else {
+                    alert('Please select at least one service');
+                }
+                return;
+            }
+            if (serviceError) serviceError.textContent = '';
+            
+            if (!date) {
+                alert('Please select a preferred date');
+                return;
+            }
+            
+            if (!time) {
+                alert('Please select a preferred time');
                 return;
             }
             
@@ -114,12 +140,23 @@ document.addEventListener('DOMContentLoaded', function() {
                 day: 'numeric'
             });
             
+            // Format time (e.g. 14:30 -> 2:30 PM)
+            const [hours, minutes] = time.split(':').map(Number);
+            const period = hours >= 12 ? 'PM' : 'AM';
+            const displayHours = hours % 12 || 12;
+            const formattedTime = `${displayHours}:${minutes.toString().padStart(2, '0')} ${period}`;
+            
+            const servicesText = selectedServices.length === 1
+                ? selectedServices[0]
+                : selectedServices.join(', ');
+            
             // Create WhatsApp message
             const message = `Hello! I would like to book an appointment:\n\n` +
                           `Name: ${name}\n` +
                           `Phone: ${phone}\n` +
-                          `Service: ${service}\n` +
-                          `Preferred Date: ${formattedDate}\n\n` +
+                          `Service(s): ${servicesText}\n` +
+                          `Preferred Date: ${formattedDate}\n` +
+                          `Preferred Time: ${formattedTime}\n\n` +
                           `Please confirm availability. Thank you!`;
             
             // Open WhatsApp
@@ -129,6 +166,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Optional: Reset form after a delay
             setTimeout(function() {
                 bookingForm.reset();
+                if (serviceError) serviceError.textContent = '';
             }, 1000);
         });
     }
@@ -184,6 +222,20 @@ document.addEventListener('DOMContentLoaded', function() {
     if (dateInput) {
         const today = new Date().toISOString().split('T')[0];
         dateInput.setAttribute('min', today);
+    }
+});
+
+// Clear service error when user selects at least one checkbox
+document.addEventListener('DOMContentLoaded', function() {
+    const serviceCheckboxes = document.querySelectorAll('input[name="service"]');
+    const serviceError = document.getElementById('serviceError');
+    if (serviceCheckboxes.length && serviceError) {
+        serviceCheckboxes.forEach(function(cb) {
+            cb.addEventListener('change', function() {
+                const anyChecked = document.querySelector('input[name="service"]:checked');
+                if (anyChecked) serviceError.textContent = '';
+            });
+        });
     }
 });
 
